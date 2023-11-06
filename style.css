@@ -48,6 +48,7 @@ input[type="radio"]{
     height: 80vh;
     padding: 20px 0;
     margin-right: 10px;
+    /* -webkit-box-reflect: below 1px linear-gradient(to bottom, red, black); */
 }
 .container .left .lefttop{
     width: 100%;
@@ -59,7 +60,7 @@ input[type="radio"]{
     border: 2px solid rgba(255, 255, 0, 0.908);
 }
 .container .left .lefttop:hover{
-    border: 1px solid rgb(205, 254, 60);
+    border: 2px solid rgba(205, 254, 60, 0.463);
     background-color: white;
     box-shadow: 0 0 10px rgba(255, 255, 255, 1),
                 0 0 20px rgba(255, 255, 255, 1),
@@ -85,7 +86,7 @@ input[type="radio"]{
     overflow: hidden;
 }
 .container .left .lefttop .bar{
-    /* width: 60%; */
+    width: 80%;
     height: 5px;
     background-color: black;
     border-radius: 5px;
@@ -93,19 +94,20 @@ input[type="radio"]{
     transition: .2s ease-in-out;
 }
 .container .left .lefttop .top{
-    width: 33px;
+    width: 70%;
 }
 .container .left .lefttop .bottom{
-    width: 25px;
+    width: 60%;
 }
 
 .container .left .lefttop .pop{
     display: none;
     position: absolute;
     top: 150px;
-    left: 36%;
+    left: calc(50% - 200px);
     width: 400px;
     height: 350px;
+    margin: auto;
     padding: 40px;
     border-radius: 10px;
     text-align: center;
@@ -122,9 +124,10 @@ input[type="radio"]{
     position: relative;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -100%);
+    transform: translate(-50%, -40%);
     font-size: 23px;
-    font-weight: bold;
+    /* font-weight: bold; */
+    text-align: center;
 }
 .container .left .lefttop .pop label .close{
     position: relative;
@@ -163,24 +166,35 @@ input[type="radio"]{
 }
 .mark{
     position: absolute;
+    top: 3%;
+    left: calc(50% - 50px);
     display: flex;
-    width: 150px;
-    height: 150px;
+    align-items: center;
+    /* justify-content: center; */
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 0, 0, 0.124);
     border-radius: 50%;
-    border: 3px solid red;
+    /* border: 4px solid green; */
+    box-shadow: inset 0 0 10px black;
+    z-index: 1;
 }
 .mark .mark1,
 .mark .mark2{
-    position: absolute;
-    width: 50px;
-    height: 20px;
-    background-color: black;
-    transform: rotateX(30deg);
-
+    position: relative;
+    top: 8px;
+    left: 6px;
+    width: 100px;
+    height: 7px;
+    background-color: rgb(246, 246, 246);
+    border-radius: 10px;
+    transform: rotate(40deg);
 }
 .mark .mark2{
+    top: 0;
+    left: -7px;
     width: 150px;
-    transform: rotateX(50dg);
+    transform: rotate(-40deg);
 }
 #btn:checked ~ .container .left .lefttop .pop{
     display: block;
@@ -190,6 +204,7 @@ input[type="radio"]{
 #btn:checked ~ .container .left .lefttop label .topcont .top{
     position: relative;
     top: 10px;
+    width: 28px;
     transform: rotate(-45deg);
 }
 #btn:checked ~ .container .left .lefttop label .topcont .middle{
@@ -199,7 +214,7 @@ input[type="radio"]{
 #btn:checked ~ .container .left .lefttop label .topcont .bottom{
     position: relative;
     top: -9.5px;
-    width: 32px;
+    width: 28px;
     transform: rotate(45deg);
 }
 
@@ -299,7 +314,7 @@ input[type="radio"]{
     position: relative;
     top: calc(100% - 5px);
     border-top: 50px solid transparent ;
-    border-left: 200px solid var(--clr);
+    border-left: 210px solid var(--clr);
     border-right: 355px solid var(--clr);
 }
 .container .center .bottom{
@@ -360,6 +375,12 @@ input[type="radio"]{
     border: 2px solid rgb(118, 186, 186);
     box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.2), 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
+.container .center .bottom .footer .act{
+    background-image: linear-gradient(to right, rgba(0, 255, 89, 0.4), rgba(0, 255, 255, 0.6));
+}
+.container .center .bottom .footer .act:hover{
+    background-image: linear-gradient(to right, rgba(0, 0, 255, 0), rgba(255, 0, 255, 0));
+}
 .container .center .bottom .footer .cont p{
     margin: 0;
     padding: 7px;
@@ -406,9 +427,6 @@ input[type="radio"]{
 }
 /* CONTAINER DESIGNING */
 .right .cont{
-    /* position: absolute; */
-    /* top: 50%;
-    transform: translateY(-50%); */
     display: none;
     width: 100%;
     height: fit-content;
@@ -420,68 +438,10 @@ input[type="radio"]{
     /* border: 2px solid rgba(0, 0, 0, 0.383); */
     background-attachment: fixed;
     background-position: center;
+    background-repeat: repeat;
     background-size: cover;
-    /* box-shadow: inset 5px 0 10px; */
     animation: animate .5s ease-in-out 1 forwards;
 }
-
-/* RIGHT CONTENT DESIGNING */
-.container .right .content5{
-    padding: 5vw;
-    /* background-image: radial-gradient( rgb(136, 173, 246), #fff); */
-}
-.content5 p:nth-of-type(1) {
-    color: gray;
-    font-style: italic;
-    text-align: center;
-    /* border: 2px solid; */
-    width: 90%;
-    padding: 3vw;
-    border-radius: 10px;
-    margin: 4vh auto;
-    box-shadow: inset -2px -2px 15px white, inset 5px 5px 10px rgba(0, 0, 0, 0.429);
-}
-.content5 h3{
-    color: rgb(126, 126, 228);
-    text-align: center;
-    margin: auto 5px;
-}
-.conta{
-    padding: 10px 0 ;
-    border-radius: 10px;
-    box-shadow: inset -2px -2px 10px white, inset 5px 5px 8px rgba(0, 0, 0, 0.429);
-}
-.links{
-    display: flex;
-    justify-content: space-evenly;
-    gap: 3px;
-    /* width: fit-content; */
-    text-align: center;
-    /* border: 2px solid rgba(180, 255, 159, 0.621); */
-    padding: 15px;
-}
-.link {
-    /* border: 2px solid white; */
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: -2px -2px 10px white, 3px 3px 10px rgba(0, 0, 0, 0.315);
-    /* text-align: center; */
-    margin: 0 4px;
-}
-.link ion-icon{
-    margin: auto;
-    position: relative;
-    font-size: 3vw;
-    left: calc(50% - 1.5vw);
-    text-align: center;
-    filter: drop-shadow(0 0 1px);
-}
-.link span{
-    text-align: center;
-    /* color: blue; */
-    font-size: 2vw;
-}
-
 
 
 /* ADD A LITLLE ANIMATION */
@@ -650,7 +610,7 @@ input[type="radio"]{
     } 
     .container .left .lefttop .pop{
         top: 400px;
-        left:285px;
+        /* left:285px; */
     } 
     .left .leftbottom{
         position: relative;
@@ -956,7 +916,7 @@ input[type="radio"]{
     } 
     .container .left .lefttop .pop{
         top: 200px;
-        left:65px;
+        left: calc(50% - 150px);
         width: 300px;
         height: 260px;
     }
