@@ -447,7 +447,7 @@ a[href="#"]{
     .container .center .bottom .footer .lightcont ul li a .icon p{
         margin: 0;
         padding: 0;
-        font-size: 4vw;
+        font-size: 3.5vw;
     }
     .lightcont ul li:not(:nth-child(1)) a .icon img{
         padding-top: 5px;
