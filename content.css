@@ -1,0 +1,561 @@
+/* WEB LOADER ANIMATION */
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-wrap: wrap;
+    width: 25px;
+    gap: 3px;
+    z-index: 1;
+    animation: load 2s ease-in-out 1 forwards;
+}
+@keyframes load {
+    
+    0%{
+        transform: rotate(45deg);
+    }
+    15%{
+        transform: rotate(90deg);
+        width: 30px;
+        gap: 10px;
+    }
+    30%{
+        transform: rotate(135deg);
+        width: 25px;
+        gap: 3px;
+    }
+    45%{
+        transform: rotate(180deg);
+        width: 30px;
+        gap: 10px;
+    }
+    60%{
+        transform: rotate(225deg);
+        width: 25px;
+        gap: 3px;
+    }
+    75%{
+        transform: rotate(280deg);
+        width: 30px;
+        gap: 10px;  
+    }
+    90%{
+        transform: rotate(320deg);
+        width: 25px;
+        gap: 3px;
+    }
+    95%, 100%{
+        transform: rotate(360deg);
+        width: 30px;
+        gap: 10px;
+        /* opacity: 0; */
+        visibility: hidden;
+        display: none;
+    }
+
+}
+.load{
+    width: 10px;
+    height: 10px;
+    background-color: var(--clr);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/*CENTER CONTACT LIGHTBOX */
+.container .center .bottom .footer .act{
+    transition: .2s;
+    animation: contact 7s ease-in-out 30s infinite forwards;
+}
+@keyframes contact {
+    0% ,93%{
+        transform: rotate(0deg);
+    }
+    94.5%{
+        transform: rotate(2deg);
+    }
+    96%{
+        transform: rotate(-2deg);
+    }
+    97.5%{
+        transform: rotate(2deg);
+    }
+    99%{
+        transform: rotate(-2deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.box{
+    display: table;
+    position: fixed;
+    top: -160%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: 300ms;
+    z-index: 1000;
+}
+.box:target {
+    top: -10px;
+    left: -5px;
+}
+.lightcont{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+.lightcont ul{
+    position: relative;
+    left: 20%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 200px;
+    width: 60%;
+    padding: 0;
+    background-color: rgb(216, 201, 251);
+    border-radius: 20px;
+    border: 3px solid white;
+    list-style: none;
+    gap: 20px;
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+                5px 5px 10px rgba(0, 0, 0, 0.5), 
+                inset -5px -5px 10px rgba(255, 255, 255, 0.7), 
+                inset 5px 5px 10px rgba(0, 0, 0, 0.4);
+}
+.lightcont ul li{
+    width: fit-content;
+}
+.lightcont ul li a .icon{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(12, 25, 113, 0.338);
+    border-radius: 10px;
+    border: 3px solid rgb(211, 213, 246);
+    box-shadow: -4px -5px 10px white, 3px 3px 10px rgba(0, 0, 0, 0.702);
+    text-align: center;
+}
+.lightcont ul li a .icon img{
+    padding-top: 5px;
+    width: 60px;
+    text-align: center;
+    margin: auto;
+    height: auto;
+}
+.container .center .bottom .footer .lightcont ul li:nth-child(1) a .icon p{
+    position: relative;
+    top: -7px;
+}
+.lightcont ul li:not(:nth-child(1)) a .icon img{
+    padding-top: 10px;
+    width: 50px;
+    /* height: 70px; */
+}
+.container .center .bottom .footer .lightcont ul li a .icon p{
+    margin: 0;
+    font-size: 16px;
+    font-weight: normal;
+    color: white;
+}
+a[href="#"]{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+    height: 40px;
+    width: 100px;
+    border: 3px solid rgba(250, 250, 251, 0.914);
+    border-radius: 10px;
+    background-color: rgb(178, 165, 165);
+    font-size: 21px;
+    text-shadow: 1px 1px 0 white, -1px -1px 0 white;
+    font-weight: bolder;
+    color: red;
+    box-shadow: inset 2px 2px 8px  white, inset -2px -2px 6px black;
+}  
+
+
+/* RIGHT CONTENT DESIGNING */
+/* CONTENT 1 */
+.right .content1 .progressor h3{
+    background-color: transparent;
+    color: rgb(189, 12, 243);
+    text-shadow: 2px 2px 0 rgb(248, 248, 248)/*, -0.5px -0.5px 0 black*/;
+}
+.progressor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+.progress{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2)50%, var(--clr) 0);
+    box-shadow: -5px -5px 10px rgba(255, 255, 255, 0.5),
+                3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+.progress h4{
+    position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgb(189, 12, 243);
+    font-size: 10px;
+    font-weight: 100;
+    z-index: 1;
+}
+
+.progress h3{
+    position: relative;
+    left: calc( 50% - 0.65em);
+    font-weight: 500;
+    font-size: 1.3em;
+    opacity: 0;
+    z-index: 1;
+    transition: .15s ease-in-out;
+    animation: text 150ms ease-in-out .93s 1 forwards;
+}
+@keyframes text {
+    100%{
+       opacity: 1; 
+    }
+}
+.progress h3 span{
+    font-size: .7em;
+}
+.progress::before{
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 50%;
+    margin-left: 50%;
+    transform-origin: left;
+    border-radius: 0 100% 100% 0/50%;
+    background: var(--clr);
+    transform: rotate(0);
+    animation: progress 500ms ease-in-out .42s 1 forwards;
+}
+@keyframes progress {
+    100%{
+        transform: rotate(calc(((var(--i) - 50) * 0.01turn )));
+    }
+}
+.progress::after{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    content: '';
+    width: 76px;
+    height: 76px;
+    background-color: rgb(245, 241, 241);
+    border-radius: 50%;
+}
+/* ADDED AFTER OFFICIAL DEPLOY */
+.progress .indicator{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px var(--clr);
+    position: absolute;
+    z-index: 10;
+    background-color: var(--clr);
+    opacity: 0;
+    transition: .2s ease-in-out;
+    animation: text 200ms ease-in-out .93s 1 forwards;
+}
+.progress:nth-child(1) .indicator{
+    left: 24px;
+}
+.progress:nth-child(2) .indicator{
+    top: 5px;
+    left: 14px;
+}
+.progress:nth-child(3) .indicator{
+    bottom: 14px;
+    left: 5px;
+}
+.progress:nth-child(4) .indicator{
+    top: 36px;
+    left: -2px;
+}
+.progress:nth-child(5) .indicator{
+    left: 25px;
+    bottom: -1px;
+}
+
+
+.cont h3{
+    background-color: grey;
+    color: white;
+    border-radius: 0 20px  20px 0;
+    z-index: 10;
+}
+.content1 ul li:nth-child(6) ul li{
+    display: flex;
+    justify-content: flex-start;
+}
+#container{
+    position: relative;
+    width: 400px;
+    box-sizing: border-box;
+    height: 3px;
+    margin: 13px;
+    border-radius: 20px;
+    background-color: rgba(153, 148, 148, 0.435);
+}
+#cont{
+    height: 3px;
+    width: 0%;
+    box-sizing: border-box; 
+    border-radius: 20px;
+    background-color: red;
+    animation: anime 1s ease-in-out 1 forwards;    
+}
+@keyframes anime {
+    100%{
+        width: var(--i);
+    }
+}
+#cont::after{
+    position: relative;
+    top: -1px;
+    background-color: rgb(255, 0, 0);
+    height: 6px;
+    width: 2px;
+    float: right;
+    content: ".";
+    display: grid;
+    place-content: center;
+    color: transparent;
+    animation: anime2 90ms ease-in-out 1 forwards;
+}
+
+#container::before{
+    content: attr(class);
+    position: absolute;
+    right: 0;
+    top: -17px;
+    float: right;
+    display: grid;
+    place-content: center;
+    height: 16px;
+    width: 20px;
+    font: 5px arial;
+    color: black;
+    transform: scale(0.7);
+} 
+
+/* 
+@keyframes anime2 {
+    10%{
+        transform: rotate(-20deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    100%{
+        opacity: 0;
+        display: none;
+    }
+}
+
+/* CONTENT--3 */
+.content3 img{
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 0 20px white);
+}
+
+
+/* CONTENT--4 */
+.content4{
+    background-color: rgb(236, 215, 244);
+}
+.content4 .note{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    width: fit-content;
+    height: 60px;
+    padding: 5px 10px;
+    margin: auto;
+    border-radius: 15px;
+    border: 1.5px solid rgba(160, 151, 241, 0.767) ;
+    background-color: rgba(224, 172, 229, 0.452);
+    color: rgb(255, 255, 255);
+    box-shadow: inset 2px 2px 10px white, inset -2px -2px 10px black;
+}
+.content4 .note .h3{
+    min-width: 30px;
+    height: 30px;
+    margin: auto;
+    font-weight: bold;
+    padding: 0px;
+    border-radius: 50%;
+    font-size: 1;
+    border: 2px solid;
+    /* background-color: aqua; */
+    box-shadow: inset -1px -1px 6px white,inset 1px 1px 5px black;
+    text-align: center;
+}
+.content4 .note p{
+    line-height:20px;
+    text-align: justify;
+    margin: auto;
+}
+
+/* CONTENT--5 */
+.container .right .content5{
+    padding: 5vw;
+    background-image: linear-gradient( to right, rgb(136, 173, 246), rgb(0, 0, 0, 0.1));
+}
+.content5 p:nth-of-type(1) {
+    color: black;
+    font-style: italic;
+    text-align: center;
+    width: 90%;
+    padding: 3vw;
+    border-radius: 10px;
+    margin: 4vh auto;
+    box-shadow: inset -2px -2px 15px white, inset 5px 5px 10px rgba(0, 0, 0, 0.429);
+}
+.content5 h3{
+    font-weight: bolder;
+    text-align: center;
+    margin: auto 5px;
+    background-color: transparent;
+}
+.conta{
+    padding: 10px 0 ;
+    border-radius: 10px;
+    box-shadow: inset -2px -2px 10px white, inset 5px 5px 8px rgba(0, 0, 0, 0.429);
+}
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 3px;
+    text-align: center;
+    padding: 15px;
+}
+.link {
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: -2px -2px 10px white, 3px 3px 10px rgba(0, 0, 0, 0.315);
+    margin: 0 4px;
+}
+.link ion-icon{
+    margin: auto;
+    position: relative;
+    font-size: 3vw;
+    left: calc(50% - 1.5vw);
+    text-align: center;
+    filter: drop-shadow(0 0 1px);
+}
+.link span{
+    text-align: center;
+    /* color: blue; */
+    font-size: 2vw;
+}
+
+@media screen and (max-width:1024px) {
+    .box{
+        height: 120%;
+    }
+    .lightcont ul{
+        top: -17%;
+    }
+    @media screen and (max-width:785px){
+        .lightcont ul{
+            width: 465px;
+            left: calc(50% - 232.5px);
+        }
+    }
+}
+
+
+@media screen and (max-width:480px) {
+    .box{
+        display: block;
+        width: 100%;
+        height: 250vh;
+    }
+    .lightcont{
+        display: flex;
+        height: 250vh;
+        padding: 20px;
+    }
+    .lightcont ul{
+        top:    58vw;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        padding: 0;
+        height: 35vw;
+        width: 100%;
+        left: -4px;
+    }
+    .lightcont ul li a .icon{
+        height: 20vw;
+        width: 20vw;
+    }
+    .lightcont ul li a .icon img{
+        width: 40px;
+        
+    }
+
+    .container .center .bottom .footer .lightcont ul li a .icon p{
+        margin: 0;
+        padding: 0;
+        font-size: 3.5vw;
+    }
+    .lightcont ul li:not(:nth-child(1)) a .icon img{
+        padding-top: 5px;
+        width: 40px;
+    }
+    a[href="#"]{
+        top: 60px;
+    }
+    .progress h3,
+    .progress h4{
+        position: absolute;
+        z-index: 1;
+    }
+    .container .left .lefttop .pop{
+        position: absolute;
+        z-index: 9999;
+    }
+    .container .right .content1 ul li:nth-child(1) .progressor .progress h3,
+    .container .right .content1 ul li:nth-child(1) .progressor .progress h4{
+        transition: 0;
+        z-index: 1;
+    }
+    
+    .progressor{
+        transition: 0;
+    }
+    #btn:checked ~ .container .progressor{
+        transform: scale(0);
+    }
+}
