@@ -305,6 +305,7 @@ input[type="radio"]{
     border-radius: 5px 5px 0 0;
 /*     background-image: url(me.jpg); */
     background-image: url(band-unvailable.jpg);
+    background-image: url(band-unva.jpg);
     background-size: cover;
 }
 .container .center .top::after{
