@@ -303,8 +303,7 @@ input[type="radio"]{
     width: 100%;
     height: 55%;
     border-radius: 5px 5px 0 0;
-/*     background-image: url(me.jpg); */
-    background-image: url(band-unvailable.jpg);
+/*     background-image: url(aike.jpg); */
     background-image: url(band-unva.jpg);
     background-size: cover;
 }
@@ -563,7 +562,6 @@ input[type="radio"]{
 .container .left .leftbottom label li{
     transition: .3s ease-in-out;
 }
-
 
 @media screen and (max-width:1024px){
     body{
@@ -838,7 +836,6 @@ input[type="radio"]{
    }
 }
 
-
 @media screen and (max-width:480px){
     body{
         max-width: 480px;
@@ -1048,7 +1045,6 @@ input[type="radio"]{
         color: black;
         z-index: 10;
     }
-
     #about:checked ~ .container .left .leftbottom ul li:nth-child(1) ion-icon{
         top: 5px;
         left: 4vw;

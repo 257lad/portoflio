@@ -365,19 +365,6 @@ a[href="#"]{
 /*     transform: scale(0.7); */
 } 
 
-/* 
-@keyframes anime2 {
-    10%{
-        transform: rotate(-20deg);
-    }
-    50%{
-        transform: rotate(20deg);
-    }
-    100%{
-        opacity: 0;
-        display: none;
-    }
-}
 
 /* CONTENT--3 */
 .content3 img{
@@ -493,8 +480,6 @@ a[href="#"]{
         }
     }
 }
-
-
 @media screen and (max-width:480px) {
     .box{
         display: block;
@@ -524,7 +509,6 @@ a[href="#"]{
         width: 40px;
         
     }
-
     .container .center .bottom .footer .lightcont ul li a .icon p{
         margin: 0;
         padding: 0;
@@ -551,7 +535,6 @@ a[href="#"]{
         transition: 0;
         z-index: 1;
     }
-    
     .progressor{
         transition: 0;
     }
